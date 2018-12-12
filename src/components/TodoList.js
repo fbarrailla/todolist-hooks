@@ -1,13 +1,13 @@
 import React from 'react';
-import useSelector from '../hooks/useSelector';
+import { useStore } from '../state/store';
 import TodoListItem from './TodoListItem';
-import { getVisibleTodos } from '../state/todos';
 
 const TodoList = () => {
-  const todos = useSelector(getVisibleTodos);
+  const { select } = useStore();
+
   return (
     <ul className="TodoList">
-      {todos.map(todo => (
+      {select.visibleTodos().map(todo => (
         <TodoListItem key={todo.id} {...todo} />
       ))}
     </ul>

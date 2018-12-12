@@ -1,10 +1,13 @@
 import React from 'react';
+import useLocalStorage from '../hooks/useLocalStorage';
 import Header from './Header';
 import Filters from './Filters';
 import TodoList from './TodoList';
 import Footer from './Footer';
 
 const App = () => {
+  useLocalStorage();
+
   return (
     <div className="App">
       <h1>Todo list.</h1>

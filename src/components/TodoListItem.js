@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import useStore from '../hooks/useStore';
-import { toggleTodo, removeTodo } from '../state/todos';
+import { useStore } from '../state/store';
 
 const TodoListItem = ({ id, task, done }) => {
   const { dispatch } = useStore();
@@ -11,15 +10,12 @@ const TodoListItem = ({ id, task, done }) => {
         done,
       })}
     >
-      <p
-        className="TodoListItem--task"
-        onClick={() => dispatch(toggleTodo(id))}
-      >
+      <p className="TodoListItem--task" onClick={() => dispatch.toggleTodo(id)}>
         {task}
       </p>
       <button
         className="TodoListItem--remove"
-        onClick={() => dispatch(removeTodo(id))}
+        onClick={() => dispatch.removeTodo(id)}
       >
         x
       </button>
