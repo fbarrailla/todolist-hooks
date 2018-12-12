@@ -1,14 +1,121 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Noto Serif TC', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #dddddd;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+.App > h1 {
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 1px grey;
+}
+
+.todolist--wrapper {
+  background: white;
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.Header {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.Header > input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.Header > button {
+  border: none;
+  outline: none;
+  font-size: 20px;
+  width: 40px;
+}
+
+.Filters {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.Filters .Filter {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid transparent;
+  padding: 5px 0;
+  margin: 0 10px;
+}
+
+.Filters .Filter.active {
+  border-color: black;
+}
+.Filters .Filter:not(.active) {
+  cursor: pointer;
+}
+
+.TodoList {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.TodoListItem {
+  display: flex;
+  list-style-type: none;
+  margin: 0 20px;
+}
+
+.TodoListItem + .TodoListItem {
+  border-top: 1px solid #f0f0f0;
+}
+
+.TodoListItem--task {
+  flex: 1;
+  margin: 0;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.TodoListItem--remove {
+  border: none;
+  outline: none;
+  font-size: 13px;
+  width: 40px;
+  opacity: 0.1;
+  cursor: pointer;
+}
+.TodoListItem--remove:hover {
+  display: block;
+  opacity: 1;
+}
+
+.TodoListItem.done .TodoListItem--task {
+  text-decoration: line-through;
+  color: #919191;
+}
+
+.Footer {
+  text-align: center;
+  padding-bottom: 10px;
 }
