@@ -9251,6 +9251,11 @@ url@^0.11.0:
     punycode "1.3.2"
     querystring "0.2.0"
 
+use-redux-store@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/use-redux-store/-/use-redux-store-0.0.1.tgz#de3ce3ab948314e62ac1275dbb7e5336b95ee56c"
+  integrity sha512-vaurumv+GiQVzjQkF6x+ZIKUAK5AtMbyTPWCkUt/6P/v1hjHmjMEQIJ/gbDxPaAy4zkikaBfsVydfU53qPN9Fg==
+
 use@^3.1.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/use/-/use-3.1.1.tgz#d50c8cac79a19fbc20f2911f56eb973f4e10070f"

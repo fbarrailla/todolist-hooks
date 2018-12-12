@@ -1,4 +1,4 @@
-import { initStore } from '../redux-hooks';
+import { initStore } from 'use-redux-store';
 import * as actions from './actions';
 import * as reducers from './reducers';
 import * as selectors from './selectors';
